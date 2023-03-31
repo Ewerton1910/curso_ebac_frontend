@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML com JS</title>
-    <link rel="stylesheet" href="style.css" />
-    </head>
+<html lang="pt-br">
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery</title>
+</head>
+
+<body>
     <div class="container">
-        <h1>EBAC comparing</h1>
-        <h2>Comparing A and B</h2>
-        <form id="form">
-        <input
-            type="number"
-            id="campoA"
-            required
-            placeholder="Digite o número A:"
-        />
-        <input
-            type="number"
-            id="campoB"
-            required
-            placeholder="Digite o número B:"
-        />
-        <p class="success-msg"></p>
-        <p class="msg-error">
-            O número digitado no campo B deve ser maior do que o do campo A!
-        </p>
-        <button id="btn-depositar" type="submit">Enviar</button>
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+        <form>
+            <input id="inputText" type="text" required placeholder="Insira a tarefa">
+            <button type="submit">+</button>
         </form>
-        <p class="success-msg"></p>
+        <div id="div-list">
+            <ul id="list">
+
+            </ul>
+        </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
-    </body>
+</body>
+
 </html>
