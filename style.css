@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B3D0C5;
+}
+
+.container {
+  width: 380px;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.form-campo {
+  margin-bottom: 16px;
+}
+
+.form-campo input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+
+#nome, #endereco { 
+  text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-campo label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+section form button {    
+  width: 180px;
+  height: 45px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin: 16px auto 0;
+  cursor: pointer;
+  background-color: #0074CC;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+section form button:hover {
+  transform: scale(1.02);
+  background-color: #1b79c2;
+  transition: 0.2s;
+}
+
+section h2 {
+  margin-bottom: 16px;
+}
+
+.error {
+  color: red;
+}
+
+#nome-error, #cpf-error,
+#email-error, #telefone-error,
+#cep-error, #endereco-error {
+  font-size: 14px;
+}
