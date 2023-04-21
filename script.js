@@ -11,8 +11,7 @@ $(document).ready(function(){
   $('form').validate({
     rules: {
       nome: {
-        required: true,
-        minlength: 20,
+        required: true
       },
       email: {
         required: true,
