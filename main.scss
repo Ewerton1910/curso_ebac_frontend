@@ -1,0 +1,127 @@
+@use "source/config/reset.scss";
+@use "source/config/variaveis.scss";
+
+
+body {
+	background-color: variaveis.$background-color_1;
+}
+li {
+	list-style: none;
+}
+.container {
+	max-width: 1024px;
+	width: 100%;
+	margin: 0 auto;
+}
+header {
+	background-color: variaveis.$background-color_2;
+	position: sticky;
+	top: 0;
+	left: 0;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px 0;
+	}
+}
+.menu {
+	display: flex;
+	li {
+		font-weight: bold;
+		margin-left: 24px;
+		a {
+			color: variaveis.$color_1;
+			text-decoration: none;
+		}
+	}
+}
+section {
+	padding: 56px 0;
+}
+.products {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(3, 32.66%);
+	column-gap: 1%;
+	row-gap: 4%;
+	width: 100%;
+}
+.product-item {
+	img {
+		width: 100%;
+		border-radius: 16px;
+	}
+}
+@mixin product-button {
+	display: block;
+	background-color: variaveis.$background-color_3;
+	color: variaveis.$color_1;
+	text-align: center;
+	padding: 8px 0;
+	border-radius: 8px;
+	margin-top: 8px;
+	text-decoration: none;
+}
+
+@mixin button-style ($background, $color){
+	background: $background;
+	color: $color;
+	
+}
+
+.product-button-black {
+	@include product-button;
+	@include button-style(variaveis.$background-color_5, #fff );
+	
+	&:hover {
+		background-color: #1b1a1a;
+	}
+}
+
+.product-button-blue {
+	@include product-button;
+	@include button-style(variaveis.$background-color_6, #fff );
+
+	&:hover {
+		background-color: rgb(29, 29, 200);
+	}
+}
+
+.product-button-green {
+	@include product-button;
+	@include button-style(variaveis.$background-color_3, #fff );
+
+	&:hover {
+		background-color: variaveis.$background-color_4;
+	}
+}
+
+.product-button-yellow {
+	@include product-button;
+	@include button-style(variaveis.$background-color_7, #000 );
+
+	&:hover {
+		background-color: rgb(193, 193, 35);
+		color: #fff;
+	}
+}
+
+
+@media screen and (max-width: 1023px) {
+	.container {
+		max-width: 80%;
+	}
+	.products {
+		grid-template-columns: repeat(2, 48.5%);
+		column-gap: 3%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.products {
+		display: block;
+	}
+	.product-item {
+		margin-bottom: 32px;
+	}
+}
