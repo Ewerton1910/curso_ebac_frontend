@@ -28,9 +28,7 @@ function compilaSass(){
 
 
 
-exports.sass = compilaSass;
-exports.javascript = compilaJavaScript;
-exports.images = comprimeImagens;
+
 
 exports.default = function(){
     gulp.watch('./source/styles/*.scss',{ignoreInitial: false}, gulp.series(compilaSass));
